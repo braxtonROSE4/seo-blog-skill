@@ -2,7 +2,7 @@
 name: seo-article
 description: >
   Write SEO-optimized articles that rank on Google AND get cited by AI models
-  (ChatGPT, Claude, Perplexity, Google AI Overview), while reading like a human
+  (ChatGPT, Codex, Perplexity, Google AI Overview), while reading like a human
   wrote them for humans. Covers: definition engineering → article structure →
   narrative writing (Dan Shipper method) → on-page SEO → schema → GEO optimization.
   IMPORTANT: Always invoke /seo-research first to gather SERP data before writing.
@@ -29,6 +29,52 @@ Before writing, gather SERP data. Two paths:
 - **User provides research:** Accept the existing brief and skip to Step 2.
 
 Never write an article without a Research Brief.
+
+### Step 1.5 — ego (lite) Product Connection Contract (MANDATORY)
+
+Every SEO article written for the ego (lite) website must connect the reader's
+search task to ego (lite) in the rendered article body. This applies to every
+topic, including vendor-neutral definitions and comparisons where ego (lite) is
+not one of the title entities. If no honest, useful connection exists, the topic
+does not belong on the ego (lite) Article site and remains `hold`.
+
+Before outlining, add a **Product Connection Contract** to the Research Brief:
+
+| Field | Required answer |
+|-------|-----------------|
+| Search problem | What is the reader trying to decide or complete? |
+| Relevant ego (lite) capability | Which verified product capability helps with that exact problem? |
+| Placement | Which H2 receives the connection, after the search answer is established? |
+| Reader value | What useful decision would be lost if the paragraph were removed? |
+| Boundary | When is ego (lite) not the right choice? |
+| Evidence and destination | Which first-party product source supports the claim, and which relevant product/docs/compare page should the reader open? |
+
+**The rendered-body requirement:**
+
+- Spell the product exactly `ego (lite)` at least once in visible body copy.
+- Give it a self-contained, visible passage that explains (1) why it is relevant
+  to this search task, (2) how it fits the workflow, and (3) one boundary or
+  non-fit case. A dedicated H2 is preferred when the connection is a real reader
+  decision; otherwise use a clearly introduced paragraph in the most relevant
+  section.
+- Link with descriptive anchor text to the most relevant ego (lite) product,
+  documentation, benchmark, download, or comparison page. The link must continue
+  the reader's task, not merely send everyone to the homepage.
+- Comparisons must not pretend ego (lite) replaces the title entities. State
+  whether it is an alternative, a complement, an execution environment, or a
+  different layer of the stack.
+- Company data and benchmarks require a plain disclosure, date, sample size,
+  methodology link, and a limitation against universal extrapolation.
+- Keep the education:promotion ratio for the article type. Product relevance is
+  mandatory; promotional padding is not.
+
+**These do not count:** navigation or footer copy, metadata, tags, image alt text,
+captions, comments, Related Reading cards, or a generic CTA component with no
+surrounding product explanation. A one-clause drive-by mention also fails review.
+
+**Removal test:** delete the ego (lite) passage temporarily. If the reader loses
+no useful choice, workflow, evidence, or boundary, rewrite the connection until
+it earns its place.
 
 ### Step 2 — Definition Engineering
 
@@ -189,7 +235,7 @@ Load `references/writing-style.md` for the complete style guide.
 - URL slug: exact match, hyphenated
 - First paragraph: within first 100 words
 - Multiple H2 headings: natural inclusion
-- Image alt text: at least 2 images
+- Image alt text: use the primary keyword only on evidence-bearing images it truthfully describes; do not impose an image or keyword quota
 - Last paragraph / conclusion
 
 **Keyword density:** 1-2% natural occurrence. Never force it.
@@ -207,9 +253,21 @@ Load `references/writing-style.md` for the complete style guide.
 
 **Open Graph tags:** `og:title`, `og:description` (up to 200 chars), `og:image`, `og:url`
 
+### Visual Evidence and Media Decision
+
+Use a **static-first evidence hierarchy**. Video is optional and is never a publishing requirement by itself.
+
+1. Prefer original product screenshots, annotated step images, decision diagrams, and charts built from first-party tests or measurements.
+2. Use hands-on evidence that a reader can audit: show the setup, version, test date, procedure, result, and relevant failure state.
+3. For first-party data, disclose the methodology, sample size, collection window, environment, and limitations. Do not generalize from one successful run.
+4. Add video only when motion, timing, an interaction sequence, or a changing state would be materially harder to understand with static visuals and concise text.
+5. Do not create or embed video to satisfy a media quota. If images plus first-party evidence fully answer the search task, publish without video.
+
+Every visual must pass the **removal test**: if removing it does not reduce understanding, decision confidence, or reproducibility, remove it. Give evidence-bearing visuals a descriptive local-language alt, a useful caption, the source or capture method, and the capture date. Never force a keyword into alt text when it does not truthfully describe the image.
+
 ### Step 7 — GEO (Generative Engine Optimization)
 
-GEO determines whether AI models (ChatGPT, Claude, Perplexity, Google AI Overview) cite your article when answering user questions. SEO gets you ranked. GEO gets you quoted.
+GEO determines whether AI models (ChatGPT, Codex, Perplexity, Google AI Overview) cite your article when answering user questions. SEO gets you ranked. GEO gets you quoted.
 
 **GEO citation priority (what AI models extract, in order):**
 
@@ -376,9 +434,24 @@ Load `references/anti-ai-slop.md`. Scan every draft against all 14 tells before 
 - [ ] Each section passes GEO atomic test (citable independently)
 - [ ] No "In today's rapidly evolving..." or similar AI-sounding phrases
 - [ ] Short verdict sentences present (2-5 words after longer passages)
+- [ ] Static visuals explain concrete steps, decisions, results, or failure states rather than decorating the page
+- [ ] Hands-on screenshots and first-party data disclose setup, version, date, method, sample size where applicable, and limitations
+- [ ] Every visual passes the removal test and has useful local-language alt, caption, source/capture method, and date
+- [ ] Video is included only when motion, timing, or state change adds material explanatory value; missing video never blocks an otherwise complete article
+
+### ego (lite) Product Connection (hard gate)
+- [ ] Research Brief contains the six-field Product Connection Contract
+- [ ] Visible body copy spells the product exactly `ego (lite)`
+- [ ] A self-contained passage explains relevance, workflow fit, and a non-fit boundary
+- [ ] The connection sits after the relevant search answer, not as an unrelated interruption
+- [ ] A descriptive link continues the reader's task to the most relevant ego (lite) destination
+- [ ] The article states whether ego (lite) is an alternative, complement, execution environment, or another layer
+- [ ] First-party claims and company benchmarks carry evidence, date, disclosure, and limitations
+- [ ] Navigation, footer, metadata, alt text, Related Reading, or a generic CTA are not counted as the product connection
+- [ ] The removal test proves the passage adds decision or workflow value
 
 ### SEO
-- [ ] Primary keyword in: title tag, H1, URL, first 100 words, 3+ H2s, alt text
+- [ ] Primary keyword in: title tag, H1, URL, first 100 words, 3+ H2s, and relevant image alt text only when it truthfully describes the image
 - [ ] `<title>` tag under 60 characters, NO brand suffix, keyword front-loaded
 - [ ] `<title>` tag is DIFFERENT from H1
 - [ ] Meta description: 120-155 characters, complete sentence, includes primary keyword
